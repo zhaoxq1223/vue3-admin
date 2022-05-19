@@ -1,4 +1,5 @@
 import axios from 'axios'
+import store from '@/store'
 import { ElMessage } from 'element-plus'
 
 const service = axios.create({
@@ -7,10 +8,20 @@ const service = axios.create({
 })
 
 // 请求拦截器
-service.interceptors.request.use((config) => {
-  config.headers.icode = 'FB827FF02D40FECD'
-  return config
-})
+service.interceptors.request.use(
+  (config) => {
+    config.headers.icode = 'FB827FF02D40FECD'
+    // 注入token
+    if (store.getters.token) {
+      config.headers.Authorization = `Bearer ${store.getters.token}`
+    }
+
+    return config
+  },
+  (error) => {
+    return Promise.reject(error)
+  }
+)
 
 // 响应拦截器
 service.interceptors.response.use(
