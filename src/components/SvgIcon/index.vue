@@ -49,7 +49,7 @@ const iconName = computed(() => `#icon-${props.icon}`)
 .svg-icon {
   width: 1em;
   height: 1em;
-  vertical-align: -0.15;
+  vertical-align: -5%;
   fill: currentColor;
   overflow: hidden;
 }
