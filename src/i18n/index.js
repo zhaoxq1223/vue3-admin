@@ -17,7 +17,7 @@ const messages = {
 }
 
 const getLanguage = () => {
-  return store?.getters?.langguage
+  return store?.getters?.language
 }
 
 const i18n = createI18n({
