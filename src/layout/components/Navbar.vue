@@ -3,6 +3,7 @@
     <Hamburger className="hamburger-container" />
     <BreadCrumb className="breadcrumb-container" />
     <div class="right-menu">
+      <Screenfull class="right-menu-item hover-effect" />
       <ThemeSelect class="right-menu-item hover-effect" />
       <LangSelect class="right-menu-item hover-effect" />
       <!-- 头像 -->
@@ -39,6 +40,7 @@ import Hamburger from '@/components/Hamburger'
 import BreadCrumb from '@/components/BreadCrumb'
 import LangSelect from '@/components/LangSelect'
 import ThemeSelect from '@/components/ThemeSelect'
+import Screenfull from '@/components/Screenfull'
 
 const store = useStore()
 const logout = () => {
