@@ -8,7 +8,7 @@
       ></el-avatar>
       <div class="logo-title" v-if="$store.getters.sidebarOpened">admin</div>
     </div>
-    <el-scrollbar>
+    <el-scrollbar id="guide-sidebar">
       <SidebarMenu />
     </el-scrollbar>
   </div>

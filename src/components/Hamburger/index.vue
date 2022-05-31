@@ -1,5 +1,10 @@
 <template>
-  <div class="hamburger-container" :class="className" @click="toggleClick">
+  <div
+    id="guide-hamburger"
+    class="hamburger-container"
+    :class="className"
+    @click="toggleClick"
+  >
     <SvgIcon className="hamburger" :icon="icon" />
   </div>
 </template>
