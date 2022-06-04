@@ -57,7 +57,7 @@
           width="300"
         >
           <template #default="{ row }">
-            <el-button type="primary" size="mini">
+            <el-button type="primary" size="mini" @click="onShowClick(row._id)">
               {{ $t('msg.excel.show') }}
             </el-button>
             <el-button type="info" size="mini">
@@ -126,6 +126,11 @@ const handleCurrentChange = (currentPage) => {
 const router = useRouter()
 const onImportExcelClick = () => {
   router.push('/user/import')
+}
+
+// 查看用户详情
+const onShowClick = (id) => {
+  router.push(`/user/info/${id}`)
 }
 
 // 删除用户
