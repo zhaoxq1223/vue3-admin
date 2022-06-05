@@ -2,7 +2,7 @@ import md5 from 'md5'
 import { login, getUserInfo } from '@/api/sys'
 import { setItem, getItem, removeAllItem } from '@/utils/storage'
 import { TOKEN } from '@/constant'
-import router from '@/router'
+import router, { resetRouter } from '@/router'
 import { setTimeStamp } from '@/utils/auth'
 
 export default {
@@ -52,6 +52,7 @@ export default {
      * @description: 退出登录
      */
     logout(context) {
+      resetRouter()
       context.commit('setToken', '')
       context.commit('setUserInfo', {})
       removeAllItem()
