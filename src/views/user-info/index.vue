@@ -34,7 +34,7 @@
             <el-descriptions-item :label="$t('msg.userInfo.remark')" :span="2">
               <el-tag
                 class="remark"
-                size="mini"
+                size="small"
                 v-for="(item, index) in detailData.remark"
                 :key="index"
                 >{{ item }}</el-tag
